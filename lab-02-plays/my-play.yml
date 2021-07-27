@@ -9,4 +9,4 @@
   become: true
   tasks:
     - name: shell installer db
-      ansible.builtin.shell: yum install mysql -y 
+      ansible.builtin.shell: yum install mysql-server -y 
