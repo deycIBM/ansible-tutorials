@@ -5,18 +5,18 @@
   tasks:
     - yum:
         pkg: httpd
-        state: installed
+        state: present
       when: ansible_distribution == "RedHat"
 
     - yum:
         pkg: httpd
-        state: installed
+        state: present
       when: ansible_distribution == "Amazon"
 
 
     - apt:
         pkg: apache2
-        state: installed
+        state: latest
       when: ansible_distribution == "Ubuntu"
 
 #    Example that prints the loopback address and gateway for each host
