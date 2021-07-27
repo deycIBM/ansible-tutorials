@@ -1,0 +1,12 @@
+---
+hosts: web
+become: true
+tasks:
+  - name: shell installer web
+    ansible.builtin.shell: yum install httpd -y
+---
+hosts: db
+become: true
+tasks:
+  - name: shell installer db
+    ansible.builtin.shell: yum install mysql -y 
